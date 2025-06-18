@@ -12,13 +12,9 @@ namespace Scripts.Systems
         private void Start()
         {
             if (FocusObserver.HasFocus == false)
-            {
                 OnPauseGame();
-            }
             else
-            {
                 OnUnPauseGame();
-            }
         }
 
         private void OnEnable()
@@ -37,17 +33,19 @@ namespace Scripts.Systems
 
         private bool ShouldStayPaused()
         {
-            // Если список пустой - не учитываем панели
-            if (_imagesPause.Count == 0) 
+            if (_imagesPause.Count == 0 || _imagesPause == null)
+            {
                 return false;
+            }
 
-            // Если хотя бы одна панель активна - остаемся на паузе
             foreach (var image in _imagesPause)
             {
                 if (image != null && image.gameObject.activeSelf)
+                {
                     return true;
+                }
             }
-            
+
             return false;
         }
 
@@ -55,16 +53,11 @@ namespace Scripts.Systems
         {
             if (visible)
             {
-                // Возобновляем игру только если ни одна панель не активна
-                if (!ShouldStayPaused())
-                {
+                if (ShouldStayPaused() == false)
                     OnUnPauseGame();
-                }
             }
             else
-            {
                 OnPauseGame();
-            }
         }
 
         private void OnFocus(bool hasFocus)
@@ -72,27 +65,19 @@ namespace Scripts.Systems
             if (FocusObserver.IsTransitioning)
             {
                 if (hasFocus == false)
-                {
                     OnPauseGame();
-                }
                 else
-                {
                     OnUnPauseGame();
-                }
+                
                 return;
             }
 
             if (hasFocus == false)
-            {
                 OnPauseGame();
-            }
             else
             {
-                // Возобновляем игру только если ни одна панель не активна
                 if (!ShouldStayPaused())
-                {
                     OnUnPauseGame();
-                }
             }
         }
 
@@ -101,27 +86,19 @@ namespace Scripts.Systems
             if (FocusObserver.IsTransitioning)
             {
                 if (pauseStatus)
-                {
                     OnPauseGame();
-                }
                 else
-                {
                     OnUnPauseGame();
-                }
+
                 return;
             }
 
             if (pauseStatus)
-            {
                 OnPauseGame();
-            }
             else
             {
-                // Возобновляем игру только если ни одна панель не активна
                 if (!ShouldStayPaused())
-                {
                     OnUnPauseGame();
-                }
             }
         }
 
@@ -138,3 +115,4 @@ namespace Scripts.Systems
         }
     }
 }
+

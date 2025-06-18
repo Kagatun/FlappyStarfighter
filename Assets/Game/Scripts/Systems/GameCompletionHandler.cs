@@ -23,6 +23,7 @@ namespace Scripts.Systems
         [SerializeField] private Image _panelRecovery;
         [SerializeField] private Image _countdownImage;
         [SerializeField] private Button _buttonStopGame;
+        [SerializeField] private Button _buttonMenu;
         [SerializeField] private AudioSource _soundVictory;
         [SerializeField] private AudioSource _soundDefeat;
         [SerializeField] private AudioSource _musicLevel;
@@ -30,22 +31,22 @@ namespace Scripts.Systems
         Coroutine _coroutineCountdown;
         Coroutine _coroutineDead;
         private bool _isRevived;
+        private bool _isDefeated = true;
         private int _countdownTime = 3;
-        private int _currentLevelIndex;
-        private WaitForSecondsRealtime _wait;
+        private int _waitTime = 1;
+        private string _leaderboard = "Score";
+        private WaitForSeconds _wait;
+        private WaitForSecondsRealtime _waitRecovery;
 
         private void Awake()
         {
-            _wait = new WaitForSecondsRealtime(_countdownTime);
+            _wait = new WaitForSeconds(_countdownTime);
+            _waitRecovery = new WaitForSecondsRealtime(_waitTime);
         }
-
-        public void SetIndexLevel(int indexLevel) =>
-            _currentLevelIndex = indexLevel;
 
         protected override void OnButtonClick()
         {
             _isRevived = true;
-            StopCountdown();
             _adRewardManager.ShowReviveAd(ContinuePlayingGame);
         }
 
@@ -66,9 +67,8 @@ namespace Scripts.Systems
         private void ContinuePlayingGame()
         {
             AudioListener.pause = false;
-            _player.Recover();
-           // _musicLevel.UnPause();
             Time.timeScale = 1;
+            _player.Recover();
             _inputDetector.enabled = true;
             _panelRecovery.gameObject.SetActive(false);
         }
@@ -76,95 +76,76 @@ namespace Scripts.Systems
         private void OnEnableButtonRecovery()
         {
             if (_isRevived == false)
-            {
-               // _panelRecovery.gameObject.SetActive(true);
-               OpenPanel(_panelRecovery);
-               //_coroutineCountdown = StartCoroutine(CountdownRoutine());
-            }
+                StartCoroutine(StartEnableButtonRecovery());
             else
-            {
-                OpenPanelDefeat();
-            }
+                _coroutineDead = StartCoroutine(HandleGameOver(_panelDefeat, _soundDefeat));
         }
 
-        private void StopCountdown()
+        private IEnumerator HandleGameOver(Image panel, AudioSource sound)
         {
-            if (_coroutineCountdown != null)
-                StopCoroutine(_coroutineCountdown);
-        }
-
-        /*private IEnumerator CountdownRoutine()
-        {
-            _inputDetector.enabled = false;
-            Time.timeScale = 0;
-            _musicLevel.Pause();
-            float timer = _countdownTime;
-
-            while (timer > 0)
-            {
-                timer -= Time.unscaledDeltaTime;
-                _countdownImage.fillAmount = timer / _countdownTime;
-
-                yield return null;
-            }
-
-            OpenPanelDefeat();
-        }*/
-
-        private IEnumerator EnabledPanelDefeat()
-        {
+            Time.timeScale = 1;
+            AudioListener.pause = false;
+            _buttonMenu.interactable = false;
             _inputDetector.enabled = false;
             _enemyDistributor.StopSpawning();
             _trackingZone.gameObject.SetActive(false);
-            _soundDefeat.Play();
+            sound.Play();
             _musicLevel.Stop();
-            _player.gameObject.SetActive(false);
-            _spawnerEffect.Spawn(_player.transform.position);
+
+            YG2.saves.Gold += _scoreCounter.CurrentScore;
+
+            if (_isDefeated)
+            {
+                _player.gameObject.SetActive(false);
+                _spawnerEffect.Spawn(_player.transform.position);
+            }
+            else
+            {
+                _player.TurnOnWinningScreensaver();
+                YG2.saves.Score += _scoreCounter.CurrentScore;
+                YG2.SetLeaderboard(_leaderboard, YG2.saves.Score);
+
+                if (YG2.saves.LevelNumber + 1 == YG2.saves.LevelIndex)
+                    YG2.saves.LevelIndex++;
+            }
+
+            YG2.SaveProgress();
 
             yield return _wait;
 
-            OpenPanel(_panelDefeat);
-            YG2.saves.Score += _scoreCounter.CurrentScore;
-            Time.timeScale = 0;
+            OpenPanel(panel);
         }
 
-        private void OpenPanelVictory() =>
-            StartCoroutine(EnabledPanelVictory());
-
-        private IEnumerator EnabledPanelVictory()
+        private void OpenPanelVictory()
         {
-            _inputDetector.enabled = false;
-            _trackingZone.gameObject.SetActive(false);
-            _player.TurnOnWinningScreensaver();
-            _soundVictory.Play();
-            _musicLevel.Stop();
-
-            yield return _wait;
-
-            OpenPanel(_panelVictory);
-            YG2.saves.Score += _scoreCounter.CurrentScore;
-            Time.timeScale = 0;
-
-            if (_currentLevelIndex == YG2.saves.LevelIndex)
-                YG2.saves.LevelIndex++;
+            _isDefeated = false;
+            StartCoroutine(HandleGameOver(_panelVictory, _soundVictory));
         }
-
-        private void OpenPanelDefeat() =>
-            _coroutineDead = StartCoroutine(EnabledPanelDefeat());
 
         private void StopGame()
         {
-            OpenPanelDefeat();
-            StopCountdown();
+            _coroutineDead = StartCoroutine(HandleGameOver(_panelDefeat, _soundDefeat));
             _panelRecovery.gameObject.SetActive(false);
         }
 
         private void OpenPanel(Image panel)
         {
+            if (_isDefeated)
+                Time.timeScale = 0;
+
             panel.gameObject.SetActive(true);
             _inputDetector.enabled = false;
+        }
+
+        private IEnumerator StartEnableButtonRecovery()
+        {
+            _inputDetector.enabled = false;
+            AudioListener.pause = true;
             Time.timeScale = 0;
+
+            yield return _waitRecovery;
+
+            _panelRecovery.gameObject.SetActive(true);
         }
     }
 }
-

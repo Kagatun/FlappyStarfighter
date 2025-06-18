@@ -5,23 +5,30 @@ namespace Scripts.Input
 {
     public class MobileInputHandler : IInputHandler
     {
+        private readonly bool _leftSideIsJump;
+        
         public event Action Jumped;
         public event Action Fired;
+        
+        public MobileInputHandler(bool isLeftControl)
+        {
+            _leftSideIsJump = isLeftControl;
+        }
 
         public void Update()
         {
-            if (UnityEngine.Input.touchCount <= 0) 
-                return;
+            foreach (Touch touch in UnityEngine.Input.touches)
+            {
+                if (touch.phase != TouchPhase.Began)
+                    continue;
             
-            Touch touch = UnityEngine.Input.GetTouch(0);
-
-            if (touch.phase != TouchPhase.Began)
-                return;
-                
-            if (touch.position.x < Screen.width / 2f)
-                Jumped?.Invoke();
-            else
-                Fired?.Invoke();
+                bool isLeftSide = touch.position.x < Screen.width / 2f;
+            
+                if (isLeftSide == _leftSideIsJump)
+                    Jumped?.Invoke();
+                else
+                    Fired?.Invoke();
+            }
         }
     }
 }

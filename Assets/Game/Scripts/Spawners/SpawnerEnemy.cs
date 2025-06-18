@@ -11,15 +11,20 @@ namespace Scripts.Spawner
         [SerializeField] private float _maxStartPositionY = -3.85f;
         [SerializeField] private float _startPositionX;
 
+        private Transform _transformSpawner;
+        
         public void Spawn()
         {
+            _transformSpawner = transform;
+            
             Enemy enemy = Get();
-            Vector2 spawnPos = transform.position + GetStartPoint();
+            Vector2 spawnPos = _transformSpawner.position + GetStartPoint();
     
-            enemy.transform.position = spawnPos;
-            enemy.transform.rotation = transform.rotation;
+            enemy.TransformEnemy.position = spawnPos;
+            enemy.TransformEnemy.rotation = _transformSpawner.rotation;
             enemy.ResetParameters(spawnPos);
             enemy.SetSpawnerBullet(_spawnerBullet);
+            enemy.ShootOnEnable();
         }
 
         protected override void OnGet(Enemy enemy)
@@ -31,9 +36,10 @@ namespace Scripts.Spawner
 
         protected override void OnRelease(Enemy enemy)
         {
+            base.OnRelease(enemy);
             enemy.Exploded -= OnSetPositionEnemy;
             enemy.Removed -= OnReturnToPool;
-            base.OnRelease(enemy);
+            enemy.ShootOnDisable();
         }
 
         private void OnReturnToPool(Enemy enemy) =>

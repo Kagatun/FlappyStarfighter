@@ -285,7 +285,7 @@ MonoBehaviour:
   - {fileID: 496221650744319186}
   - {fileID: 7662575599828333052}
   - {fileID: 3135447512057418875}
-  _minTimeBetween: 1.2
+  _minTimeBetween: 0.7
   _maxTimeBetween: 2
   _damage: 1
   _speedBullet: -4
@@ -301,11 +301,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ff25251192c894e9da37d0c7ddbf31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementType: 1
   _moveSpeed: 1
-  _rotationSpeed: 50
-  _zigZagAmplitude: 1.5
-  _zigZagFrequency: 1.5
+  _rotationSpeed: 0
+  _zigZagAmplitude: 0.5
+  _zigZagFrequency: 0.5
 --- !u!1 &5531702098012551978
 GameObject:
   m_ObjectHideFlags: 0

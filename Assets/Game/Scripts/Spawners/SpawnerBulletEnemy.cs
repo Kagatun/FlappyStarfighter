@@ -10,7 +10,7 @@ namespace Scripts.Spawner
         public void Spawn(Transform firePoint, float speed, int damage)
         {
             Bullet bullet = Get();
-            bullet.transform.position = firePoint.position;
+            bullet.TransformBullet.position = firePoint.position;
             bullet.SetParameters(firePoint, speed, damage);
             _sound.Play();
         }

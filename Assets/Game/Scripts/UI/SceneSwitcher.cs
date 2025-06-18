@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using YG;
 
 namespace Scripts.UI
 {
@@ -7,7 +8,10 @@ namespace Scripts.UI
     {
         [SerializeField] private int _sceneIndex;
 
-        protected override void OnButtonClick() =>
+        protected override void OnButtonClick()
+        {
+            YG2.InterstitialAdvShow();
             SceneManager.LoadScene(_sceneIndex);
+        }
     }
 }

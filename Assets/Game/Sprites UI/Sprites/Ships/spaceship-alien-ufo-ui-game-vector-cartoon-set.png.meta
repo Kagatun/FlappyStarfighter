@@ -1,0 +1,354 @@
+fileFormatVersion: 2
+guid: 07ce15374a0b4e541ac55694d8613c43
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spaceship-alien-ufo-ui-game-vector-cartoon-set_3
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 455
+        width: 404
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 046417bd333258642ac09a2c5d88fb91
+      internalID: 2140341028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship-alien-ufo-ui-game-vector-cartoon-set_4
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 498
+        width: 302
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa33c602fa0ebb4cae83b1924031b6b
+      internalID: -195060022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship-alien-ufo-ui-game-vector-cartoon-set_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 552
+        width: 191
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec093e75fde730f41b1b8ff91a8faf9e
+      internalID: 906047733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship-alien-ufo-ui-game-vector-cartoon-set_40
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 41
+        width: 331
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ef61b6d2238584cbb4e12408258cb2
+      internalID: -906791835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship-alien-ufo-ui-game-vector-cartoon-set_42
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 43
+        width: 433
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32fb0dbb2c9dd94781f7a17b6e755c1
+      internalID: -1534250127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship-alien-ufo-ui-game-vector-cartoon-set_0
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 6
+        width: 399
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300379e31acfb414ab441d46d06962ee
+      internalID: 1804189033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship-alien-ufo-ui-game-vector-cartoon-set_1
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 516
+        width: 465
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf2fac32daa43c4e92f367ff0ab82e9
+      internalID: 209988209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_0: 1804189033
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_1: 209988209
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_10: 1508893006
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_11: 385660836
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_12: -1895376110
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_13: 2002269241
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_14: -1600605771
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_15: -771656683
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_16: 399115156
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_17: 1564423168
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_18: -665581247
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_19: 109938972
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_2: 1249927870
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_20: -1273298821
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_21: -2095962895
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_22: 1046510290
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_23: 377789723
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_24: -1606313269
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_25: 1925352176
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_26: 1254332103
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_27: 1842964519
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_28: -1048063390
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_29: 1441458534
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_3: 2140341028
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_30: -1459768688
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_31: 1349892815
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_32: 1245872549
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_33: -244265181
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_34: -1594177737
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_35: 735635583
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_36: -642182589
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_37: -364358320
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_38: -1948006620
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_39: 1452139880
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_4: -195060022
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_40: -906791835
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_41: 1816092821
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_42: -1534250127
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_43: 701007685
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_44: -539829177
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_45: 774236564
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_46: -1552761583
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_47: -111893086
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_48: 330692463
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_49: -1341673780
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_5: 906047733
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_50: -46722767
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_51: 1307158172
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_52: -608529297
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_53: -1673401991
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_6: -1171479277
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_7: -1999047828
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_8: 1012371650
+      spaceship-alien-ufo-ui-game-vector-cartoon-set_9: -1018957952
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

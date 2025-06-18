@@ -206,12 +206,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2101171977, guid: fb7d512bd169f74438c9bf4b3d4184c4, type: 3}
+  m_Sprite: {fileID: -1670697207, guid: fb7d512bd169f74438c9bf4b3d4184c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.61, y: 1.32}
+  m_Size: {x: 2.22, y: 1.44}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -254,7 +254,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.22, y: 1.44}
-    newSize: {x: 2.61, y: 1.32}
+    newSize: {x: 2.22, y: 1.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -389,7 +389,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _attacker: {fileID: 0}
   _mover: {fileID: 7855462418903098748}
-  _hitPoint: 1
+  _hitPoint: 2
+  _isShootingOnSpawn: 0
+  _isShootingOnDeath: 0
   <ScoreValue>k__BackingField: 3
 --- !u!114 &7855462418903098748
 MonoBehaviour:
@@ -403,10 +405,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ff25251192c894e9da37d0c7ddbf31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementType: 1
-  _moveSpeed: 5
-  _rotationSpeed: 50
-  _zigZagAmplitude: 1.5
+  _moveSpeed: 6
+  _rotationSpeed: 0
+  _zigZagAmplitude: 0
   _zigZagFrequency: 1.5
 --- !u!114 &7533313906064696254
 MonoBehaviour:

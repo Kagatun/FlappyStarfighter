@@ -1,4 +1,3 @@
-using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using YG;
@@ -9,11 +8,6 @@ namespace Scripts.Input
     {
         [DllImport("__Internal")]
         private static extern int DetectDevice();
-
-        private void Awake()
-        {
-            Time.timeScale = 1;
-        }
 
         private void Start()
         {

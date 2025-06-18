@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ff161bc36927f4986d438bd3289848, type: 3}
+  m_Name: Level 36
+  m_EditorClassIdentifier: 
+  SpaceColor: {r: 0.60784316, g: 0, b: 1, a: 1}
+  TypesEnemies: 0101010101010101010101010101010101010000000000000000
+  EnemiesCount: 82

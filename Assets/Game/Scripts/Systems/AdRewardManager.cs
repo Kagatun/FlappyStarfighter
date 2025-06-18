@@ -6,23 +6,41 @@ namespace Scripts.Systems
 {
     public class AdRewardManager : MonoBehaviour
     {
-        private Action _onRewardCallback;
+        public event Action RewardCallback;
+
+        private void OnEnable()
+        {
+            YG2.onCloseAnyAdv += OnUnPause;
+        }
+
+        private void OnDisable()
+        {
+            YG2.onCloseAnyAdv -= OnUnPause;
+        }
 
         public void ShowReviveAd(Action onRewardCallback)
         {
-            _onRewardCallback = onRewardCallback;
+            RewardCallback = onRewardCallback;
             YG2.RewardedAdvShow("revive", OnAdCompleted);
+        }
+
+        private void OnUnPause()
+        {
+            Time.timeScale = 1;
+            AudioListener.pause = false;
+            FocusObserver.UpdateFocusState(true);
         }
 
         private void OnAdCompleted()
         {
-            _onRewardCallback?.Invoke();
-            _onRewardCallback = null;
+            RewardCallback?.Invoke();
+            RewardCallback = null;
+            FocusObserver.UpdateFocusState(true);
         }
-        
+
         private void OnDestroy()
         {
-            _onRewardCallback = null;
+            RewardCallback = null;
         }
     }
 }

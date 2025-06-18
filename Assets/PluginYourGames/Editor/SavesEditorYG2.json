@@ -7,12 +7,19 @@
         false,
         false
     ],
-    "idSave": 3966,
+    "idSave": 402,
     "IsDesktop": true,
-    "MaxHitPoints": 0,
-    "Score": 7313,
-    "LevelIndex": 3,
+    "IsLeft": true,
+    "IsAutoAttack": false,
+    "MaxHitPoints": 3,
+    "PercentageMultiShooting": 3,
+    "CooldownLaser": 2,
+    "CooldownShield": 2,
+    "LevelIndex": 51,
+    "LevelNumber": 0,
+    "Gold": 94,
+    "Score": 2221,
     "MasterVolume": 1.0,
-    "MusicVolume": 0.37463295459747317,
-    "SoundVolume": 0.2712070047855377
+    "MusicVolume": 0.3613889217376709,
+    "SoundVolume": 0.20863890647888184
 }

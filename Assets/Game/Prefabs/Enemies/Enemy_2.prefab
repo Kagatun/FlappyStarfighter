@@ -227,7 +227,7 @@ MonoBehaviour:
   _firepoints:
   - {fileID: 5072033595234130262}
   _minTimeBetween: 0.7
-  _maxTimeBetween: 2.5
+  _maxTimeBetween: 1.5
   _damage: 2
   _speedBullet: -4
 --- !u!114 &1563466120367641632
@@ -242,10 +242,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ff25251192c894e9da37d0c7ddbf31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementType: 1
   _moveSpeed: 2
-  _rotationSpeed: 50
-  _zigZagAmplitude: 1.5
+  _rotationSpeed: 0
+  _zigZagAmplitude: 0
   _zigZagFrequency: 1.5
 --- !u!1 &8354866289292936411
 GameObject:

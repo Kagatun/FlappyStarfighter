@@ -12,7 +12,7 @@ namespace Scripts.Spawner
         public void Spawn(Transform direction, float speed, int damage)
         {
             Bullet bullet = Get();
-            bullet.transform.position = direction.position;
+            bullet.TransformBullet.position = direction.position;
             bullet.SetParameters(direction, speed, damage);
             _scoreCounter.Subscribe(bullet);
             _sound.Play();

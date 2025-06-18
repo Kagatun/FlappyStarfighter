@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using Scripts.Spawner;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Scripts.Enemies
 {
@@ -27,12 +29,7 @@ namespace Scripts.Enemies
             Reset();
         }
 
-        private void OnEnable()
-        {
-            Reset();
-        }
-
-        private void Reset()
+        public void Reset()
         {
             _attackTimer = 0;
             _currentAttackInterval = Random.Range(_minTimeBetween, _maxTimeBetween);
@@ -41,7 +38,7 @@ namespace Scripts.Enemies
         public void SetSpawnerBullet(SpawnerBulletEnemy bulletEnemy) =>
             _spawnerBullet = bulletEnemy;
 
-        private void Shoot()
+        public void Shoot()
         {
             for (int i = 0; i < _firepoints.Count; i++)
                 _spawnerBullet.Spawn(_firepoints[i].transform, _speedBullet, _damage);

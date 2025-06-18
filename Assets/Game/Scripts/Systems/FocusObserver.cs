@@ -14,24 +14,29 @@ namespace Scripts.Systems
         public static bool IsPause { get; private set; }
         public static bool IsTransitioning { get; set; }
 
+        private void Start()
+        {
+            HasFocus = YG2.isFocusWindowGame;
+        }
+        
         private void OnEnable()
         {
-            YG2.onPauseGame += OnYandexVisibilityChanged;
+            /*YG2.onPauseGame += OnYandexVisibilityChanged;*/
             YG2.onShowWindowGame += OnYandexWindowShown;
             YG2.onHideWindowGame += OnYandexWindowHidden;
         }
 
         private void OnDisable()
         {
-            YG2.onPauseGame -= OnYandexVisibilityChanged;
+            /*YG2.onPauseGame -= OnYandexVisibilityChanged;*/
             YG2.onShowWindowGame -= OnYandexWindowShown;
             YG2.onHideWindowGame -= OnYandexWindowHidden;
         }
 
-        private void OnYandexVisibilityChanged(bool visible)
+        /*private void OnYandexVisibilityChanged(bool visible)
         {
             UpdateFocusState(visible);
-        }
+        }*/
 
         private void OnYandexWindowShown()
         {
@@ -45,7 +50,8 @@ namespace Scripts.Systems
 
         public static void UpdateFocusState(bool hasFocus)
         {
-            if (HasFocus == hasFocus) return;
+            if (HasFocus == hasFocus)
+                return;
 
             HasFocus = hasFocus;
             ApplicationFocus?.Invoke(hasFocus);
@@ -53,7 +59,8 @@ namespace Scripts.Systems
 
         public static void UpdatePauseState(bool isPaused)
         {
-            if (IsPause == isPaused) return;
+            if (IsPause == isPaused)
+                return;
 
             IsPause = isPaused;
             ApplicationPause?.Invoke(isPaused);
@@ -75,3 +82,4 @@ namespace Scripts.Systems
         }
     }
 }
+

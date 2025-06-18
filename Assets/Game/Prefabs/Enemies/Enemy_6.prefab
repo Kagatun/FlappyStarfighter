@@ -240,8 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ff25251192c894e9da37d0c7ddbf31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementType: 5
   _moveSpeed: 2
-  _rotationSpeed: 50
+  _rotationSpeed: 0
   _zigZagAmplitude: 1
   _zigZagFrequency: 1

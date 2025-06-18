@@ -209,7 +209,9 @@ MonoBehaviour:
   _attacker: {fileID: 0}
   _mover: {fileID: 3367097550020138366}
   _hitPoint: 1
-  <ScoreValue>k__BackingField: 3
+  _isShootingOnSpawn: 0
+  _isShootingOnDeath: 0
+  <ScoreValue>k__BackingField: 2
 --- !u!114 &3367097550020138366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,9 +224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ff25251192c894e9da37d0c7ddbf31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementType: 5
   _moveSpeed: 1
-  _rotationSpeed: 50
+  _rotationSpeed: 0
   _zigZagAmplitude: 1.5
   _zigZagFrequency: 1.5
 --- !u!114 &9004626333918795014

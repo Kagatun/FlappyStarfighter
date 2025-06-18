@@ -13,14 +13,17 @@ namespace Scripts.PlayerUFO
         [SerializeField] private float _maxRotationZ;
         [SerializeField] private float _minRotationZ;
 
-        public Rigidbody2D Rigidbody { get; private set; }
+        private Transform _playerTransform;
         private Quaternion _maxRotation;
         private Quaternion _minRotation;
+        
+        public Rigidbody2D Rigidbody { get; private set; }
 
         private void Awake()
         {
             Rigidbody = GetComponent<Rigidbody2D>();
 
+            _playerTransform = transform;
             _maxRotation = Quaternion.Euler(0, 0, _maxRotationZ);
             _minRotation = Quaternion.Euler(0, 0, _minRotationZ);
         }
@@ -43,10 +46,10 @@ namespace Scripts.PlayerUFO
         private void OnTakeOff()
         {
             Rigidbody.velocity = new Vector2(_speed, _tapForce);
-            transform.rotation = _maxRotation;
+            _playerTransform.rotation = _maxRotation;
         }
 
         private void Fall() =>
-            transform.rotation = Quaternion.Lerp(transform.rotation, _minRotation, _rotationSpeed * Time.fixedDeltaTime);
+            _playerTransform.rotation = Quaternion.Lerp(transform.rotation, _minRotation, _rotationSpeed * Time.fixedDeltaTime);
     }
 }

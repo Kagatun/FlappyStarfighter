@@ -79,12 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2080386198, guid: fb7d512bd169f74438c9bf4b3d4184c4, type: 3}
+  m_Sprite: {fileID: -360298204, guid: fb7d512bd169f74438c9bf4b3d4184c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 17.28, y: 9.41}
+  m_Size: {x: 2.5, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -122,8 +122,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2.5, y: 2}
+  m_Offset: {x: -0.15, y: -0.15}
+  m_Size: {x: 2.19, y: 1.83}
   m_Direction: 0
 --- !u!50 &2651105509945342386
 Rigidbody2D:
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _firepoints:
   - {fileID: 6156927076224920540}
-  _minTimeBetween: 1.3
+  _minTimeBetween: 1
   _maxTimeBetween: 1.5
   _damage: 1
   _speedBullet: -4
@@ -198,10 +198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ff25251192c894e9da37d0c7ddbf31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementType: 5
   _moveSpeed: -2
-  _rotationSpeed: 50
-  _zigZagAmplitude: 2
+  _rotationSpeed: 0
+  _zigZagAmplitude: 1.5
   _zigZagFrequency: 3
 --- !u!1 &3099434263503911641
 GameObject:

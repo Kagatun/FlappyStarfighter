@@ -11,7 +11,7 @@ namespace Scripts.Spawner
         {
             EffectExplosion effectExplosion = Get();
             effectExplosion.Activate();
-            effectExplosion.transform.position = spawnPoint;
+            effectExplosion.TransformEffect.position = spawnPoint;
             _sound.Play();
         }
 

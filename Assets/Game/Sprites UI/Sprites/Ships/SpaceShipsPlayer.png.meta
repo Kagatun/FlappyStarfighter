@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2310-w077-n006-32B-p1-32-Photoroom_0
+      name: SpaceShipsPlayer_0
       rect:
         serializedVersion: 2
         x: 444
@@ -144,20 +144,20 @@ TextureImporter:
         width: 144
         height: 263
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80a33c78b5d66dd45b93c2e052667a06
-      internalID: 1841072159
+      spriteID: afb92fddef341994a96272b35a7dc424
+      internalID: 1128888107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2310-w077-n006-32B-p1-32-Photoroom_1
+      name: SpaceShipsPlayer_1
       rect:
         serializedVersion: 2
         x: 660
@@ -165,20 +165,20 @@ TextureImporter:
         width: 180
         height: 258
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2f4b03c99eb7c847a45c25e3a49ec68
-      internalID: 259989606
+      spriteID: 721c9d3ba3f5b7748abed95d8e3fc259
+      internalID: 133710409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2310-w077-n006-32B-p1-32-Photoroom_3
+      name: SpaceShipsPlayer_3
       rect:
         serializedVersion: 2
         x: 122
@@ -186,41 +186,41 @@ TextureImporter:
         width: 250
         height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 852907fdd1814df4da62f238a06a6605
-      internalID: 2080386198
+      spriteID: 5c7f7b61659bd6a448a2c95d78f8aa79
+      internalID: -360298204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2310-w077-n006-32B-p1-32-Photoroom_5
+      name: SpaceShipsPlayer_5
       rect:
         serializedVersion: 2
-        x: 902
+        x: 901
         y: 282
         width: 259
         height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 802dcca82c4075a44b903f8ef8a144a2
-      internalID: 1514225809
+      spriteID: 62800796e0bf75648ae4d8f80474a30b
+      internalID: -336999576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2310-w077-n006-32B-p1-32-Photoroom_10
+      name: SpaceShipsPlayer_10
       rect:
         serializedVersion: 2
         x: 90
@@ -228,20 +228,20 @@ TextureImporter:
         width: 222
         height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1747a1625ec5c449b15793dde049470
-      internalID: 2101171977
+      spriteID: 3aebd9251db4fb64aaf57b0cd20356c8
+      internalID: -1670697207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2310-w077-n006-32B-p1-32-Photoroom_12
+      name: SpaceShipsPlayer_12
       rect:
         serializedVersion: 2
         x: 356
@@ -249,20 +249,20 @@ TextureImporter:
         width: 268
         height: 188
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27c8467811d112841988aee3236e1187
-      internalID: 1457408900
+      spriteID: 3e4704c470c81e64c8a896d065a3e3df
+      internalID: 1418537290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2310-w077-n006-32B-p1-32-Photoroom_13
+      name: SpaceShipsPlayer_13
       rect:
         serializedVersion: 2
         x: 642
@@ -270,20 +270,20 @@ TextureImporter:
         width: 261
         height: 132
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd6a1f1b5fe2a824189c4e7195e507b7
-      internalID: 2104068205
+      spriteID: 80ed5f70a291e6f4aa425f579e213196
+      internalID: -98090023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 2310-w077-n006-32B-p1-32-Photoroom_14
+      name: SpaceShipsPlayer_14
       rect:
         serializedVersion: 2
         x: 950
@@ -291,14 +291,14 @@ TextureImporter:
         width: 240
         height: 234
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cfa3a76b0930ee44b007357f3f1ee66
-      internalID: 552974756
+      spriteID: 28bc19071269ea84a84a0264cb5e2f92
+      internalID: 1063643597
       vertices: []
       indices: 
       edges: []
@@ -314,27 +314,27 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      2310-w077-n006-32B-p1-32-Photoroom_0: 1841072159
-      2310-w077-n006-32B-p1-32-Photoroom_1: 259989606
-      2310-w077-n006-32B-p1-32-Photoroom_10: 2101171977
-      2310-w077-n006-32B-p1-32-Photoroom_11: 1108585961
-      2310-w077-n006-32B-p1-32-Photoroom_12: 1457408900
-      2310-w077-n006-32B-p1-32-Photoroom_13: 2104068205
-      2310-w077-n006-32B-p1-32-Photoroom_14: 552974756
-      2310-w077-n006-32B-p1-32-Photoroom_15: -1340646287
-      2310-w077-n006-32B-p1-32-Photoroom_16: 1230043594
-      2310-w077-n006-32B-p1-32-Photoroom_17: 898103957
-      2310-w077-n006-32B-p1-32-Photoroom_18: 2112682005
-      2310-w077-n006-32B-p1-32-Photoroom_19: 601093046
-      2310-w077-n006-32B-p1-32-Photoroom_2: 375818171
-      2310-w077-n006-32B-p1-32-Photoroom_20: -313473895
-      2310-w077-n006-32B-p1-32-Photoroom_3: 2080386198
-      2310-w077-n006-32B-p1-32-Photoroom_4: -583231866
-      2310-w077-n006-32B-p1-32-Photoroom_5: 1514225809
-      2310-w077-n006-32B-p1-32-Photoroom_6: 386464164
-      2310-w077-n006-32B-p1-32-Photoroom_7: -1734187529
-      2310-w077-n006-32B-p1-32-Photoroom_8: -1252135778
-      2310-w077-n006-32B-p1-32-Photoroom_9: 1078351971
+      SpaceShipsPlayer_0: 1128888107
+      SpaceShipsPlayer_1: 133710409
+      SpaceShipsPlayer_10: -1670697207
+      SpaceShipsPlayer_11: 868746057
+      SpaceShipsPlayer_12: 1418537290
+      SpaceShipsPlayer_13: -98090023
+      SpaceShipsPlayer_14: 1063643597
+      SpaceShipsPlayer_15: 516437825
+      SpaceShipsPlayer_16: -697528444
+      SpaceShipsPlayer_17: 496059718
+      SpaceShipsPlayer_18: -1340959825
+      SpaceShipsPlayer_19: -186450750
+      SpaceShipsPlayer_2: 102710245
+      SpaceShipsPlayer_20: -1667726408
+      SpaceShipsPlayer_3: -360298204
+      SpaceShipsPlayer_4: 285687136
+      SpaceShipsPlayer_5: -336999576
+      SpaceShipsPlayer_6: -1749701539
+      SpaceShipsPlayer_7: -379459848
+      SpaceShipsPlayer_8: -330075223
+      SpaceShipsPlayer_9: -1481039461
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

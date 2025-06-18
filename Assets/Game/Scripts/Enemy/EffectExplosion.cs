@@ -13,6 +13,13 @@ namespace Scripts.Enemies
         private bool _isPaused;
 
         public event Action<EffectExplosion> Removed;
+        
+       public Transform TransformEffect {get; private set;}
+
+        private void Awake()
+        {
+            TransformEffect =  transform;
+        }
 
         private void OnEnable()
         {

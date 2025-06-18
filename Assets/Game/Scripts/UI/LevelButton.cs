@@ -1,4 +1,3 @@
-using Scripts.Systems;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,27 +8,32 @@ namespace Scripts.UI
 {
     public class LevelButton : ButtonHandler
     {
-        [SerializeField] private GameSettings _levelSettings;
+        [SerializeField] private int _levelNumber;
+        [SerializeField] private Color _backgroundColor;
         [SerializeField] private Image _imageBlock;
-        [SerializeField] private Image _imageButton;
+        [SerializeField] private Image _buttonImage;
         [SerializeField] private TMP_Text _text;
 
         private void Start()
         {
-            if (YG2.saves.LevelIndex < _levelSettings.LevelNumber)
+            _buttonImage.color = _backgroundColor;
+            
+            if (YG2.saves.LevelIndex < _levelNumber)
             {
                 _imageBlock.gameObject.SetActive(true);
                 _text.gameObject.SetActive(false);
-                ActionButton.interactable = false;;
-            }
+                ActionButton.interactable = false;
 
-            _imageButton.color = _levelSettings.SpaceColor;
-            _text.text = _levelSettings.LevelNumber.ToString();
+                return;
+            }
+            
+            _text.text = _levelNumber.ToString();
         }
 
         protected override void OnButtonClick()
         {
-            LevelManager.GameSettings = _levelSettings;
+            YG2.saves.LevelNumber = _levelNumber - 1;
+            YG2.SaveProgress();
             SceneManager.LoadScene(1);
         }
     }

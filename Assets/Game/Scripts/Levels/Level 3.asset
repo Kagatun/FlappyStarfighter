@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ff161bc36927f4986d438bd3289848, type: 3}
   m_Name: Level 3
   m_EditorClassIdentifier: 
-  LevelNumber: 3
-  SpaceColor: {r: 0.21975517, g: 1, b: 0, a: 1}
-  LevelMusic: {fileID: 8300000, guid: 0fc1265615be9f544a3bc0b484133dc4, type: 3}
-  EnemiesCount: 0300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
+  SpaceColor: {r: 1, g: 1, b: 1, a: 1}
+  TypesEnemies: 0101000000000000000000000000000000000000000000000000
+  EnemiesCount: 16

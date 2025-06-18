@@ -3,35 +3,42 @@ using Scripts.PlayerUFO;
 using Scripts.Spawner;
 using Scripts.UI;
 using UnityEngine;
+using UnityEngine.UI;
+using YG;
 
 namespace Scripts.Systems
 {
     public class StarterGame : ButtonHandler
     {
-        [SerializeField] private GameCompletionHandler _gameCompletionHandler;
+        [SerializeField] private LevelData _levelData;
+        [SerializeField] private Button _buttonNextLevel;
         [SerializeField] private Material _backgroundMaterial;
-        [SerializeField] private InputDetector  _inputDetector;
+        [SerializeField] private InputDetector _inputDetector;
         [SerializeField] private Player _player;
         [SerializeField] private AudioSource _music;
         [SerializeField] private EnemyDistributor _enemyDistributor;
+        [SerializeField] private Image _startPanel;
 
-        private void Awake()
+        private int _maxLevelGame = 49;
+        
+        private void Start()
         {
-            Time.timeScale = 1;
-            AudioListener.pause = false;
-            
-            _music.clip = LevelManager.GameSettings.LevelMusic;
-            _backgroundMaterial.color = LevelManager.GameSettings.SpaceColor;
-            _gameCompletionHandler.SetIndexLevel(LevelManager.GameSettings.LevelNumber);
+            _levelData.SetLevelData();
+            _backgroundMaterial.color = _levelData.LevelSettings.SpaceColor;
+            _enemyDistributor.SetEnemies(_levelData.LevelSettings.TypesEnemies, _levelData.LevelSettings.EnemiesCount);
+
+            if (_maxLevelGame == YG2.saves.LevelNumber)
+                _buttonNextLevel.gameObject.SetActive(false);
         }
 
         protected override void OnButtonClick()
         {
-            _enemyDistributor.SetCountsEnemies(LevelManager.GameSettings.EnemiesCount);
+            _startPanel.gameObject.SetActive(false);
             _enemyDistributor.StartSpawning();
             _inputDetector.enabled = true;
             _music.Play();
             _player.EnableMover();
+            _player.StartAttack();
         }
     }
 }
