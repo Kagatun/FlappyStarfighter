@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using Scripts.Input;
@@ -55,7 +54,7 @@ namespace Scripts.PlayerUFO
             else
                 StopAutoAttack();
         }
-        
+
         public void StopAutoAttack()
         {
             if (_coroutineShooting == null)
@@ -93,7 +92,7 @@ namespace Scripts.PlayerUFO
 
         private IEnumerator AutoShootingCoroutine()
         {
-            while (true)
+            while (enabled)
             {
                 PerformShoot();
 

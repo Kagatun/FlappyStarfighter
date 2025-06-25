@@ -31,7 +31,8 @@ namespace Scripts.Enemies
             if (_zigZagAmplitude > 0)
             {
                 _time += Time.deltaTime;
-                _movementDelta.y = (Mathf.Sin(_time * _zigZagFrequency) * _zigZagAmplitude) - (_transform.position.y - _initialY);
+                _movementDelta.y = (Mathf.Sin(_time * _zigZagFrequency) * _zigZagAmplitude) -
+                                   (_transform.position.y - _initialY);
             }
 
             _deltaRotation = _rotationSpeed * Time.deltaTime;
@@ -41,7 +42,7 @@ namespace Scripts.Enemies
                 _transform.Rotate(0, 0, _deltaRotation);
         }
 
-        public void Reset(Vector2 spawnPosition)
+        public void ResetPosition(Vector2 spawnPosition)
         {
             _initialY = spawnPosition.y;
             _time = 0;

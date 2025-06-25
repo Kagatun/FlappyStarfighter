@@ -36,12 +36,17 @@ namespace Scripts.Input
                 ? new DesktopInputHandler(YG2.saves.IsLeft)
                 : new MobileInputHandler(YG2.saves.IsLeft);
 
-            _inputHandler.Jumped += () => Jumped?.Invoke();
-            _inputHandler.Fired += () =>
-            {
-                if (_isAutoAttackEnabled == false)
-                    Fired?.Invoke();
-            };
+            _inputHandler.Jumped += OnInputHandlerJumped;
+            _inputHandler.Fired += OnInputHandlerFired;
+        }
+
+        private void OnInputHandlerJumped() =>
+            Jumped?.Invoke();
+
+        private void OnInputHandlerFired()
+        {
+            if (_isAutoAttackEnabled == false)
+                Fired?.Invoke();
         }
 
         public void SetAutoAttack(bool isEnabled)

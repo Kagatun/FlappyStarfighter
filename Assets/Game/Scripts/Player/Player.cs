@@ -7,7 +7,7 @@ using YG;
 
 namespace Scripts.PlayerUFO
 {
-    public class Player : MonoBehaviour, IDestroyable, IDamageable
+    public class Player : MonoBehaviour, IRemovable
     {
         [SerializeField] private PlayerAttacker _attacker;
         [SerializeField] private PlayerShield _shield;
@@ -72,7 +72,7 @@ namespace Scripts.PlayerUFO
                 _health.TakeDamage(damage);
         }
 
-        public void OnDestroy()
+        public void Remove()
         {
             DisableMover();
             _laser.enabled = false;

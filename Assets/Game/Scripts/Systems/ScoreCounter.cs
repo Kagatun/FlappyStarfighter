@@ -7,10 +7,10 @@ namespace Scripts.Systems
 {
     public class ScoreCounter : MonoBehaviour
     {
-        [SerializeField] private ScoreView  _scoreView;
+        [SerializeField] private ScoreView _scoreView;
         [SerializeField] private PlayerLaser _laser;
-        
-        public int CurrentScore {get; private set;}
+
+        public int CurrentScore { get; private set; }
 
         private void OnEnable()
         {

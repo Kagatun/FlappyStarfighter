@@ -61,7 +61,8 @@ namespace Scripts.Input
 
         private void UpdateShootingImagesVisibility()
         {
-            if (_imagesClickShooting == null) return;
+            if (_imagesClickShooting == null)
+                return;
 
             bool shouldShow = YG2.saves.IsAutoAttack == false;
 

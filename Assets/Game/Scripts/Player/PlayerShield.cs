@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using YG;
 
@@ -11,7 +10,7 @@ namespace Scripts.PlayerUFO
         [SerializeField] private Material _shieldMaterial;
         [SerializeField] private AudioSource _soundShieldActivated;
         [SerializeField] private int _cooldown = 13;
-        
+
         private float _currentTime;
 
         public bool HasRestored { get; private set; } = true;

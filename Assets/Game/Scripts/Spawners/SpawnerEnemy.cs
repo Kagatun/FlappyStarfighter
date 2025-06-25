@@ -6,20 +6,20 @@ namespace Scripts.Spawner
     public class SpawnerEnemy : SpawnerObjects<Enemy>
     {
         [SerializeField] private SpawnerEffect _effect;
-        [SerializeField] private SpawnerBulletEnemy  _spawnerBullet;
+        [SerializeField] private SpawnerBulletEnemy _spawnerBullet;
         [SerializeField] private float _minStartPositionY = 3.33f;
         [SerializeField] private float _maxStartPositionY = -3.85f;
         [SerializeField] private float _startPositionX;
 
         private Transform _transformSpawner;
-        
+
         public void Spawn()
         {
             _transformSpawner = transform;
-            
+
             Enemy enemy = Get();
             Vector2 spawnPos = _transformSpawner.position + GetStartPoint();
-    
+
             enemy.TransformEnemy.position = spawnPos;
             enemy.TransformEnemy.rotation = _transformSpawner.rotation;
             enemy.ResetParameters(spawnPos);

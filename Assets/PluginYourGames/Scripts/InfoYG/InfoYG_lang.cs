@@ -106,7 +106,7 @@ namespace YG.Insides
         public const string deactivateNJSONForSave = "Deactivate NJSON for Storage";
 
         public const string resetInfoSettings = "Set default settings";
-        public const string resetInfoSettings_dialog = "Reset all plugin settings?\n(go back using ctrl + z)";
+        public const string resetInfoSettings_dialog = "ResetPosition all plugin settings?\n(go back using ctrl + z)";
 
         public const string demoScenesInBuildSettings = "Demo Scenes in Build Settings";
         public const string addDemoScenes = "Add Demo Scenes";

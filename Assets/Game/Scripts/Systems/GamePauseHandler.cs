@@ -12,9 +12,13 @@ namespace Scripts.Systems
         private void Start()
         {
             if (FocusObserver.HasFocus == false)
+            {
                 OnPauseGame();
+            }
             else
+            {
                 OnUnPauseGame();
+            }
         }
 
         private void OnEnable()
@@ -54,10 +58,14 @@ namespace Scripts.Systems
             if (visible)
             {
                 if (ShouldStayPaused() == false)
+                {
                     OnUnPauseGame();
+                }
             }
             else
+            {
                 OnPauseGame();
+            }
         }
 
         private void OnFocus(bool hasFocus)
@@ -65,19 +73,27 @@ namespace Scripts.Systems
             if (FocusObserver.IsTransitioning)
             {
                 if (hasFocus == false)
+                {
                     OnPauseGame();
+                }
                 else
+                {
                     OnUnPauseGame();
-                
+                }
+
                 return;
             }
 
             if (hasFocus == false)
+            {
                 OnPauseGame();
+            }
             else
             {
                 if (!ShouldStayPaused())
+                {
                     OnUnPauseGame();
+                }
             }
         }
 
@@ -86,19 +102,27 @@ namespace Scripts.Systems
             if (FocusObserver.IsTransitioning)
             {
                 if (pauseStatus)
+                {
                     OnPauseGame();
+                }
                 else
+                {
                     OnUnPauseGame();
+                }
 
                 return;
             }
 
             if (pauseStatus)
+            {
                 OnPauseGame();
+            }
             else
             {
                 if (!ShouldStayPaused())
+                {
                     OnUnPauseGame();
+                }
             }
         }
 
@@ -115,4 +139,3 @@ namespace Scripts.Systems
         }
     }
 }
-

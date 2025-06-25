@@ -5,11 +5,11 @@ namespace Scripts.Input
 {
     public class DesktopInputHandler : IInputHandler
     {
-        public event Action Jumped;
-        public event Action Fired;
-
         private readonly int _jumpButton;
         private readonly int _fireButton;
+        
+        public event Action Jumped;
+        public event Action Fired;
 
         public DesktopInputHandler(bool isLeftControl)
         {

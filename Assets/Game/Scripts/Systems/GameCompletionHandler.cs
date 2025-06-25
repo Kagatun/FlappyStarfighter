@@ -11,6 +11,10 @@ namespace Scripts.Systems
 {
     public class GameCompletionHandler : ButtonHandler
     {
+        private readonly int _countdownTime = 3;
+        private readonly int _waitTime = 1;
+        private readonly string _leaderboard = "Score";
+
         [SerializeField] private Player _player;
         [SerializeField] private SpawnerEffect _spawnerEffect;
         [SerializeField] private InputDetector _inputDetector;
@@ -21,20 +25,14 @@ namespace Scripts.Systems
         [SerializeField] private Image _panelVictory;
         [SerializeField] private Image _panelDefeat;
         [SerializeField] private Image _panelRecovery;
-        [SerializeField] private Image _countdownImage;
         [SerializeField] private Button _buttonStopGame;
         [SerializeField] private Button _buttonMenu;
         [SerializeField] private AudioSource _soundVictory;
         [SerializeField] private AudioSource _soundDefeat;
         [SerializeField] private AudioSource _musicLevel;
 
-        Coroutine _coroutineCountdown;
-        Coroutine _coroutineDead;
         private bool _isRevived;
         private bool _isDefeated = true;
-        private int _countdownTime = 3;
-        private int _waitTime = 1;
-        private string _leaderboard = "Score";
         private WaitForSeconds _wait;
         private WaitForSecondsRealtime _waitRecovery;
 
@@ -78,7 +76,7 @@ namespace Scripts.Systems
             if (_isRevived == false)
                 StartCoroutine(StartEnableButtonRecovery());
             else
-                _coroutineDead = StartCoroutine(HandleGameOver(_panelDefeat, _soundDefeat));
+                StartCoroutine(HandleGameOver(_panelDefeat, _soundDefeat));
         }
 
         private IEnumerator HandleGameOver(Image panel, AudioSource sound)
@@ -124,7 +122,7 @@ namespace Scripts.Systems
 
         private void StopGame()
         {
-            _coroutineDead = StartCoroutine(HandleGameOver(_panelDefeat, _soundDefeat));
+            StartCoroutine(HandleGameOver(_panelDefeat, _soundDefeat));
             _panelRecovery.gameObject.SetActive(false);
         }
 

@@ -7,8 +7,12 @@ namespace Scripts.Systems
     [CreateAssetMenu(fileName = "GameSettings", menuName = "Game/GameSettings")]
     public class GameSettings : ScriptableObject
     {
-        public Color SpaceColor;
-        public List<bool> TypesEnemies;
-        public int EnemiesCount;
+        [SerializeField] private Color _spaceColor;
+        [SerializeField] private List<bool> _typesEnemies;
+        [SerializeField] private int _enemiesCount;
+
+        public Color SpaceColor => _spaceColor;
+        public IReadOnlyList<bool> TypesEnemies => _typesEnemies;
+        public int EnemiesCount => _enemiesCount;
     }
 }

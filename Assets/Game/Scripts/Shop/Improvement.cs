@@ -9,6 +9,8 @@ namespace Scripts.Shop
 {
     public class Improvement : ButtonHandler
     {
+        private readonly List<int> _pricesTool = new List<int> { 150, 500, 1000, 2500, 5000 };
+        
         [SerializeField] private UpgradeSaveField _upgradeSaveField;
         [SerializeField] private List<Image> _starsLevels;
         [SerializeField] private List<TextMeshProUGUI> _specifications;
@@ -17,7 +19,6 @@ namespace Scripts.Shop
         [SerializeField] private AudioSource _audioBuy;
         [SerializeField] private Animator _animator;
 
-        private readonly List<int> _pricesTool = new List<int> { 150, 500, 1000, 2500, 5000 };
         private int _indexSave;
         private Vector3 _defaultScaleButton = Vector3.one;
 

@@ -11,7 +11,8 @@ namespace Scripts.Systems
 
         private void Start()
         {
-            int clipIndex = (YG2.saves.LevelNumber - 1) / 5;
+            int numberOfLevelsLocation = 5;
+            int clipIndex = YG2.saves.LevelNumber / numberOfLevelsLocation;
             _music.clip = _audioClips[clipIndex];
         }
     }

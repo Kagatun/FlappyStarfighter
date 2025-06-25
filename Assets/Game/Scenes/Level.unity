@@ -1876,7 +1876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e99e433079d8c98458dbc3cdee23848b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 203087177}
+  _actionButton: {fileID: 203087177}
 --- !u!1 &206522663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,10 +1921,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3478ea635b3394640b7e4436a87ff7ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 11
   _enemyLayer:
     serializedVersion: 2
     m_Bits: 64
+  _radius: 11
   _checkInterval: 0.2
 --- !u!1 &211443923
 GameObject:
@@ -3170,7 +3170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e12572835a9be34296b406d17623d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1039072923}
+  _actionButton: {fileID: 1039072923}
   _inputDetector: {fileID: 432667135}
   _panelPause: {fileID: 1717918569}
   _panelInterface: {fileID: 1739447694}
@@ -4844,7 +4844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 562affca953b0a14694c97c8be638c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 548005480}
+  _actionButton: {fileID: 548005480}
   _inputDetector: {fileID: 432667135}
   _leftDesktopPanels:
   - {fileID: 1025681347}
@@ -5611,7 +5611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b26192fee4a574bb1a876b40248f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 665407593}
+  _actionButton: {fileID: 665407593}
   _sceneIndex: 0
 --- !u!1 &683019935
 GameObject:
@@ -6330,7 +6330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b26192fee4a574bb1a876b40248f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 752930023}
+  _actionButton: {fileID: 752930023}
   _sceneIndex: 0
 --- !u!1001 &763475953
 PrefabInstance:
@@ -7392,7 +7392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e58ee6b37b5ed4449bcfbe9482900427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 51435968}
+  _actionButton: {fileID: 51435968}
   _goldText: {fileID: 1916744073}
   _adRewardManager: {fileID: 2050733438}
   _scoreCounter: {fileID: 1215358194}
@@ -10284,7 +10284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b02263ac7953547b351c6fcfe1e26d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1765046686}
+  _actionButton: {fileID: 1765046686}
   _player: {fileID: 1225393350}
   _spawnerEffect: {fileID: 1618409617}
   _inputDetector: {fileID: 432667135}
@@ -10295,7 +10295,6 @@ MonoBehaviour:
   _panelVictory: {fileID: 875669965}
   _panelDefeat: {fileID: 1691501318}
   _panelRecovery: {fileID: 1014060212}
-  _countdownImage: {fileID: 0}
   _buttonStopGame: {fileID: 1403861853}
   _buttonMenu: {fileID: 1039072923}
   _soundVictory: {fileID: 1311657595}
@@ -10585,7 +10584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b26192fee4a574bb1a876b40248f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1274411200}
+  _actionButton: {fileID: 1274411200}
   _sceneIndex: 0
 --- !u!1 &1285486688
 GameObject:
@@ -12009,7 +12008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b26192fee4a574bb1a876b40248f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1439128032}
+  _actionButton: {fileID: 1439128032}
   _sceneIndex: 0
 --- !u!1 &1454787590
 GameObject:
@@ -12386,7 +12385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b34f3ceba1b3f468790d943ff70687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1467480829}
+  _actionButton: {fileID: 1467480829}
 --- !u!1 &1468627782
 GameObject:
   m_ObjectHideFlags: 0
@@ -12507,7 +12506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd9abe5f32964d2478b732825005ca1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 199771870}
+  _actionButton: {fileID: 199771870}
   _levelData: {fileID: 2030753614}
   _buttonNextLevel: {fileID: 203087177}
   _backgroundMaterial: {fileID: 2100000, guid: d87ed0d1e76054f4a88735250ba4b282, type: 2}
@@ -12868,7 +12867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b34f3ceba1b3f468790d943ff70687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1533766114}
+  _actionButton: {fileID: 1533766114}
 --- !u!1 &1542610803
 GameObject:
   m_ObjectHideFlags: 0
@@ -14107,7 +14106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e58ee6b37b5ed4449bcfbe9482900427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 511948436}
+  _actionButton: {fileID: 511948436}
   _goldText: {fileID: 1808666383}
   _adRewardManager: {fileID: 2050733438}
   _scoreCounter: {fileID: 1215358194}
@@ -16473,12 +16472,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mixerMaster: {fileID: 24300002, guid: 32d530d31613e994a903fd9c99075c7f, type: 2}
   _soundSliders:
-  - SaveField: 0
-    Slider: {fileID: 1709891452}
-  - SaveField: 1
-    Slider: {fileID: 815172687}
-  - SaveField: 2
-    Slider: {fileID: 1810551569}
+  - _saveField: 0
+    _slider: {fileID: 1709891452}
+  - _saveField: 1
+    _slider: {fileID: 815172687}
+  - _saveField: 2
+    _slider: {fileID: 1810551569}
 --- !u!114 &1953701322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18099,7 +18098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b34f3ceba1b3f468790d943ff70687, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 2087926117}
+  _actionButton: {fileID: 2087926117}
 --- !u!1 &2116306087
 GameObject:
   m_ObjectHideFlags: 0

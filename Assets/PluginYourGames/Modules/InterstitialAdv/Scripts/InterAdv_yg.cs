@@ -49,7 +49,7 @@ namespace YG
         private static void InitInterstitialAdv()
         {
 #if UNITY_EDITOR
-            // Reset static for ESC
+            // ResetPosition static for ESC
             YGInsides.timeShowInterAdv = 0;
             skipIterAdv = false;
             onOpenInterAdv = null;

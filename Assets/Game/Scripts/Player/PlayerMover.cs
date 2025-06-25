@@ -16,7 +16,7 @@ namespace Scripts.PlayerUFO
         private Transform _playerTransform;
         private Quaternion _maxRotation;
         private Quaternion _minRotation;
-        
+
         public Rigidbody2D Rigidbody { get; private set; }
 
         private void Awake()
@@ -50,6 +50,7 @@ namespace Scripts.PlayerUFO
         }
 
         private void Fall() =>
-            _playerTransform.rotation = Quaternion.Lerp(transform.rotation, _minRotation, _rotationSpeed * Time.fixedDeltaTime);
+            _playerTransform.rotation =
+                Quaternion.Lerp(transform.rotation, _minRotation, _rotationSpeed * Time.fixedDeltaTime);
     }
 }

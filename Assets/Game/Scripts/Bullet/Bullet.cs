@@ -5,27 +5,28 @@ using UnityEngine;
 
 namespace Scripts.Shooting
 {
-    public class Bullet : MonoBehaviour, IDestroyable
+    public class Bullet : MonoBehaviour, IRemovable
     {
         [SerializeField] private LayerMask _targetMask;
 
         private Vector2 _direction;
+        private Vector2 _velocity;
         private float _speed;
         private int _damage;
 
         public event Action<int> Fitted;
         public event Action<Bullet> Removed;
-        
+
         public Transform TransformBullet { get; private set; }
 
         private void Awake()
         {
-            TransformBullet =  transform;
+            TransformBullet = transform;
         }
 
         private void Update()
         {
-            TransformBullet.Translate(_direction * _speed * Time.deltaTime, Space.World);
+            TransformBullet.Translate(_velocity * Time.deltaTime, Space.World);
         }
 
         private void OnTriggerEnter2D(Collider2D collider)
@@ -43,7 +44,7 @@ namespace Scripts.Shooting
                 player.TakeDamage(_damage);
             }
 
-            OnDestroy();
+            Remove();
         }
 
         public void SetParameters(Transform firePoint, float speed, int damage)
@@ -51,10 +52,11 @@ namespace Scripts.Shooting
             _damage = damage;
             _speed = speed;
             _direction = firePoint.right;
+            _velocity = _direction * _speed;
             TransformBullet.rotation = firePoint.rotation;
         }
 
-        public void OnDestroy() =>
+        public void Remove() =>
             Removed?.Invoke(this);
     }
 }

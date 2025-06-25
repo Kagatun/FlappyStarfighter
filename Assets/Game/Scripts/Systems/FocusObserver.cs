@@ -6,64 +6,29 @@ namespace Scripts.Systems
 {
     public class FocusObserver : MonoBehaviour
     {
+        private bool _isPause;
+
         public static event Action<bool> ApplicationFocus;
         public static event Action<bool> ApplicationPause;
-        public event Action ApplicationQuit;
 
         public static bool HasFocus { get; private set; } = true;
-        public static bool IsPause { get; private set; }
-        public static bool IsTransitioning { get; set; }
+        public static bool IsTransitioning { get; }
 
         private void Start()
         {
             HasFocus = YG2.isFocusWindowGame;
         }
-        
+
         private void OnEnable()
         {
-            /*YG2.onPauseGame += OnYandexVisibilityChanged;*/
             YG2.onShowWindowGame += OnYandexWindowShown;
             YG2.onHideWindowGame += OnYandexWindowHidden;
         }
 
         private void OnDisable()
         {
-            /*YG2.onPauseGame -= OnYandexVisibilityChanged;*/
             YG2.onShowWindowGame -= OnYandexWindowShown;
             YG2.onHideWindowGame -= OnYandexWindowHidden;
-        }
-
-        /*private void OnYandexVisibilityChanged(bool visible)
-        {
-            UpdateFocusState(visible);
-        }*/
-
-        private void OnYandexWindowShown()
-        {
-            UpdateFocusState(true);
-        }
-
-        private void OnYandexWindowHidden()
-        {
-            UpdateFocusState(false);
-        }
-
-        public static void UpdateFocusState(bool hasFocus)
-        {
-            if (HasFocus == hasFocus)
-                return;
-
-            HasFocus = hasFocus;
-            ApplicationFocus?.Invoke(hasFocus);
-        }
-
-        public static void UpdatePauseState(bool isPaused)
-        {
-            if (IsPause == isPaused)
-                return;
-
-            IsPause = isPaused;
-            ApplicationPause?.Invoke(isPaused);
         }
 
         private void OnApplicationFocus(bool hasFocus)
@@ -76,10 +41,28 @@ namespace Scripts.Systems
             UpdatePauseState(pauseStatus);
         }
 
-        private void OnApplicationQuit()
+        public static void UpdateFocusState(bool hasFocus)
         {
-            ApplicationQuit?.Invoke();
+            if (HasFocus == hasFocus)
+                return;
+
+            HasFocus = hasFocus;
+            ApplicationFocus?.Invoke(hasFocus);
         }
+
+        private void UpdatePauseState(bool isPaused)
+        {
+            if (_isPause == isPaused)
+                return;
+
+            _isPause = isPaused;
+            ApplicationPause?.Invoke(isPaused);
+        }
+
+        private void OnYandexWindowShown() =>
+            UpdateFocusState(true);
+
+        private void OnYandexWindowHidden() =>
+            UpdateFocusState(false);
     }
 }
-

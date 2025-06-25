@@ -7,11 +7,18 @@ namespace Scripts.Utils
         [SerializeField] private Transform _player;
         [SerializeField] private float _offsetX;
 
+        Transform _transform;
+
+        private void Awake()
+        {
+            _transform = transform;
+        }
+
         private void Update()
         {
-            Vector3 position = transform.position;
-            position.x = _player.transform.position.x + _offsetX;
-            transform.position = position;
+            Vector3 position = _transform.position;
+            position.x = _player.position.x + _offsetX;
+            _transform.position = position;
         }
     }
 }

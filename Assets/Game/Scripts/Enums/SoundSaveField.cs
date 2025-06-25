@@ -2,5 +2,5 @@ public enum SoundSaveField
 {
     MasterVolume,
     MusicVolume,
-    SoundVolume
+    SoundVolume,
 }

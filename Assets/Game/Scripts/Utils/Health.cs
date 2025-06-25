@@ -5,17 +5,23 @@ namespace Scripts.Utils
 {
     public class Health
     {
-        public event Action <int> Hited;
-        public event Action <int> Healed;
+        public event Action<int> Hited;
+        public event Action<int> Healed;
         public event Action Deceased;
-
-        public int Value { get; private set; }
-        public int MaxValue { get;}
-
+        
         public Health(int defaultHealth)
         {
             MaxValue = defaultHealth;
             Value = MaxValue;
+        }
+        
+        public int Value { get; private set; }
+        public int MaxValue { get; }
+
+        public void Reset()
+        {
+            Value = MaxValue;
+            Healed?.Invoke(MaxValue);
         }
 
         public void TakeDamage(int damage)
@@ -25,16 +31,7 @@ namespace Scripts.Utils
             Hited?.Invoke(damage);
 
             if (Value <= 0)
-                Die();
-        }
-        
-        public void Die() =>
-            Deceased?.Invoke();
-
-        public void Reset()
-        {
-            Value = MaxValue;
-            Healed?.Invoke(MaxValue);
+                Deceased?.Invoke();
         }
     }
 }

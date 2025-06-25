@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Scripts.Utils;
 using UnityEngine;
@@ -15,22 +14,22 @@ namespace Scripts.UI
 
         private void OnEnable()
         {
-            if (_playerHealth != null)
-            {
-                _playerHealth.Hited += OnTurnOffImageHeart;
-                _playerHealth.Deceased += OnTurnOffAllImageHeart;
-                _playerHealth.Healed += OnTurnOnHearts;
-            }
+            if (_playerHealth == null)
+                return;
+
+            _playerHealth.Hited += OnTurnOffImageHeart;
+            _playerHealth.Deceased += OnTurnOffAllImageHeart;
+            _playerHealth.Healed += OnTurnOnHearts;
         }
 
         private void OnDisable()
         {
-            if (_playerHealth.MaxValue > 0 && _playerHealth != null)
-            {
-                _playerHealth.Hited -= OnTurnOffImageHeart;
-                _playerHealth.Deceased -= OnTurnOffAllImageHeart;
-                _playerHealth.Healed -= OnTurnOnHearts;
-            }
+            if (_playerHealth.MaxValue <= 0 || _playerHealth == null)
+                return;
+
+            _playerHealth.Hited -= OnTurnOffImageHeart;
+            _playerHealth.Deceased -= OnTurnOffAllImageHeart;
+            _playerHealth.Healed -= OnTurnOnHearts;
         }
 
         public void SetHealth(Health health)
@@ -47,9 +46,9 @@ namespace Scripts.UI
         {
             for (int i = 0; i < _healthHealthyImages.Count && healthPoint > 0; i++)
             {
-                if (_healthHealthyImages[i].enabled || !_healthImages[i].activeSelf) 
+                if (_healthHealthyImages[i].enabled || !_healthImages[i].activeSelf)
                     continue;
-                
+
                 _healthHealthyImages[i].enabled = true;
                 healthPoint--;
             }
@@ -70,9 +69,9 @@ namespace Scripts.UI
         {
             for (int i = _healthHealthyImages.Count - 1; i >= 0 && damage > 0; i--)
             {
-                if (_healthHealthyImages!= null &&!_healthHealthyImages[i].enabled)
+                if (!_healthHealthyImages[i].enabled)
                     continue;
-                
+
                 _healthHealthyImages[i].enabled = false;
                 damage--;
             }

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Scripts.Enemies
 {
-    public class Enemy : MonoBehaviour, IDamageable, IDestroyable
+    public class Enemy : MonoBehaviour, IRemovable
     {
         [SerializeField] private EnemyAttacker _attacker;
         [SerializeField] private EnemyMover _mover;
@@ -13,9 +13,9 @@ namespace Scripts.Enemies
         [SerializeField] private bool _isShootingOnSpawn;
         [SerializeField] private bool _isShootingOnDeath;
 
-        [field: SerializeField] public int ScoreValue { get; private set; }
-
         private Health _health;
+        
+        [field: SerializeField] public int ScoreValue { get; private set; }
 
         public event Action<Enemy> Removed;
         public event Action<Vector3> Exploded;
@@ -30,12 +30,12 @@ namespace Scripts.Enemies
 
         private void OnEnable()
         {
-            _health.Deceased += OnDestroy;
+            _health.Deceased += Remove;
         }
 
         private void OnDisable()
         {
-            _health.Deceased -= OnDestroy;
+            _health.Deceased -= Remove;
         }
 
         public void ResetParameters(Vector2 spawnPosition)
@@ -46,13 +46,13 @@ namespace Scripts.Enemies
                 _attacker.Reset();
 
             if (_mover != null)
-                _mover.Reset(spawnPosition);
+                _mover.ResetPosition(spawnPosition);
         }
 
         public void TakeDamage(int damage) =>
             _health.TakeDamage(damage);
 
-        public void OnDestroy()
+        public void Remove()
         {
             if (_health.Value <= 0)
                 Exploded?.Invoke(TransformEnemy.position);
@@ -73,12 +73,11 @@ namespace Scripts.Enemies
 
         public void ShootOnDisable()
         {
-            if(_health.Value > 0)
+            if (_health.Value > 0)
                 return;
-                
+
             OnShoot(_isShootingOnDeath);
         }
-
 
         private void OnShoot(bool isShoot)
         {

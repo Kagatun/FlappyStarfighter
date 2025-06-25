@@ -20,7 +20,7 @@ namespace YG
         private static void InitStorage()
         {
 #if UNITY_EDITOR
-            // Reset static for ECS
+            // ResetPosition static for ECS
             saves = new SavesYG();
             onDefaultSaves = null;
 
@@ -51,7 +51,7 @@ namespace YG
 
         public static void SetDefaultSaves()
         {
-            Message("Reset Save Progress");
+            Message("ResetPosition Save Progress");
             int idSave = saves.idSave;
             saves = new SavesYG { idSave = idSave };
 

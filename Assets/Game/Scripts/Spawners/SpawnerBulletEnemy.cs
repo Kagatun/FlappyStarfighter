@@ -6,7 +6,7 @@ namespace Scripts.Spawner
     public class SpawnerBulletEnemy : SpawnerObjects<Bullet>
     {
         [SerializeField] private AudioSource _sound;
-        
+
         public void Spawn(Transform firePoint, float speed, int damage)
         {
             Bullet bullet = Get();
@@ -14,7 +14,7 @@ namespace Scripts.Spawner
             bullet.SetParameters(firePoint, speed, damage);
             _sound.Play();
         }
-        
+
         protected override void OnGet(Bullet enemy)
         {
             base.OnGet(enemy);

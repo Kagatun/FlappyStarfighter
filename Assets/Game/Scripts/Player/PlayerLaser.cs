@@ -1,26 +1,23 @@
-using UnityEngine;
 using System;
 using Scripts.Enemies;
+using UnityEngine;
 using YG;
 
 namespace Scripts.PlayerUFO
 {
     public class PlayerLaser : MonoBehaviour
     {
-        [Header("Settings")] [SerializeField] private LayerMask _enemyLayer;
+        private readonly Collider2D[] _enemyBuffer = new Collider2D[15];
+        
+        [SerializeField] private LayerMask _enemyLayer;
         [SerializeField] private float _cooldown = 15f;
         [SerializeField] private float _searchInterval = 0.1f;
         [SerializeField] private float _searchRadius = 14f;
         [SerializeField] private float _laserDuration = 0.2f;
         [SerializeField] private int _damage = 1;
-
-        [Header("References")] [SerializeField]
-        private AudioSource _laserSound;
-
+        [SerializeField] private AudioSource _laserSound;
         [SerializeField] private LineRenderer _laserLine;
-
-        private readonly Collider2D[] _enemyBuffer = new Collider2D[15];
-
+        
         private Transform _transform;
         private float _lastSearchTime;
         private float _laserTimer;
@@ -52,7 +49,7 @@ namespace Scripts.PlayerUFO
             if (_isReady)
                 SearchForEnemies();
         }
-        
+
         public void ResetLaser()
         {
             CancelInvoke(nameof(SetReady));
@@ -105,14 +102,14 @@ namespace Scripts.PlayerUFO
 
                 float distance = (_enemyBuffer[i].transform.position - _transform.position).sqrMagnitude;
 
-                if (distance < closestDistance)
-                {
-                    closestDistance = distance;
-                    enemy = currentEnemy;
-                }
+                if (!(distance < closestDistance))
+                    continue;
+
+                closestDistance = distance;
+                enemy = currentEnemy;
             }
 
-            return enemy != null;
+            return !ReferenceEquals(enemy, null);
         }
 
         private void AttackEnemy(Enemy enemy)

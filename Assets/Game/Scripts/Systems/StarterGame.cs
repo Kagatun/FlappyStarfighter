@@ -1,3 +1,4 @@
+using System.Linq;
 using Scripts.Input;
 using Scripts.PlayerUFO;
 using Scripts.Spawner;
@@ -20,12 +21,12 @@ namespace Scripts.Systems
         [SerializeField] private Image _startPanel;
 
         private int _maxLevelGame = 49;
-        
+
         private void Start()
         {
             _levelData.SetLevelData();
             _backgroundMaterial.color = _levelData.LevelSettings.SpaceColor;
-            _enemyDistributor.SetEnemies(_levelData.LevelSettings.TypesEnemies, _levelData.LevelSettings.EnemiesCount);
+            _enemyDistributor.SetEnemies(_levelData.LevelSettings.TypesEnemies.ToList(), _levelData.LevelSettings.EnemiesCount);
 
             if (_maxLevelGame == YG2.saves.LevelNumber)
                 _buttonNextLevel.gameObject.SetActive(false);

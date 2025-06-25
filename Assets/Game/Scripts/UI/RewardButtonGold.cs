@@ -8,12 +8,12 @@ namespace Scripts.UI
 {
     public class RewardButtonGold : ButtonHandler
     {
+        private readonly int _rewardGold = 100;
+        
         [SerializeField] private TextMeshProUGUI _textGold;
         [SerializeField] private AdRewardManager _adRewardManager;
-        [SerializeField] private GoldView  _goldView;
-
-        private readonly int _rewardGold = 100;
-
+        [SerializeField] private GoldView _goldView;
+        
         protected override void OnButtonClick()
         {
             _adRewardManager.ShowReviveAd(GetReward);

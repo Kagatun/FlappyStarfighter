@@ -15,7 +15,7 @@ namespace YG
         private static void InitLang()
         {
 #if UNITY_EDITOR
-            onSwitchLang = null;  // Reset static for ESC
+            onSwitchLang = null;  // ResetPosition static for ESC
 #endif
             if (infoYG.Localization.setLanguageMod == InfoYG.LocalizationSettings.SetLangMod.DoNotChangeLanguageStartup)
             {

@@ -13,7 +13,7 @@ namespace Scripts.UI
         protected override void OnButtonClick()
         {
             YG2.InterstitialAdvShow();
-            
+
             foreach (Image panel in _panelsOpen)
                 panel.gameObject.SetActive(true);
 

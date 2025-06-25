@@ -1,13 +1,16 @@
 using Scripts.PlayerUFO;
 using UnityEngine;
 
-public class EnemyCollisionDetector : MonoBehaviour
+namespace Scripts.Enemies
 {
-    [SerializeField] private int _damage;
-    
-    private void OnTriggerEnter2D(Collider2D other)
+    public class EnemyCollisionDetector : MonoBehaviour
     {
-        if (other.gameObject.TryGetComponent(out Player player))
-            player.TakeDamage(_damage);
+        [SerializeField] private int _damage;
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.TryGetComponent(out Player player))
+                player.TakeDamage(_damage);
+        }
     }
 }

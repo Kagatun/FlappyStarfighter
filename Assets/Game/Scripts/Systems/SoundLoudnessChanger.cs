@@ -10,6 +10,10 @@ namespace Scripts.Systems
         [SerializeField] private AudioMixerGroup _mixerMaster;
         [SerializeField] private List<SoundSlider> _soundSliders;
 
+        private const float MinVolume = 0.00001f;
+        private const float MaxVolume = 1f;
+        private const float DbMultiplier = 20f;
+
         private void Start()
         {
             if (YG2.isSDKEnabled)
@@ -35,14 +39,14 @@ namespace Scripts.Systems
         private void OnVolumeChanged(SoundSaveField saveField, float volume)
         {
             string mixerParam = saveField.ToString();
-            float dBValue = Mathf.Log10(Mathf.Clamp(volume, 0.00001f, 1f)) * 20;
-            
+            float dBValue = Mathf.Log10(Mathf.Clamp(volume, MinVolume, MaxVolume)) * DbMultiplier;
+
             _mixerMaster.audioMixer.SetFloat(mixerParam, dBValue);
             var field = typeof(SavesYG).GetField(mixerParam);
 
-            if (field == null || field.FieldType != typeof(float)) 
+            if (field == null || field.FieldType != typeof(float))
                 return;
-            
+
             field.SetValue(YG2.saves, volume);
             YG2.SaveProgress();
         }
@@ -51,7 +55,7 @@ namespace Scripts.Systems
         {
             foreach (var slider in _soundSliders)
             {
-                if (slider.Slider == null) 
+                if (slider.Slider == null)
                     continue;
 
                 string fieldName = slider.SaveField.ToString();
@@ -59,7 +63,7 @@ namespace Scripts.Systems
 
                 if (field == null || field.FieldType != typeof(float))
                     continue;
-                
+
                 float savedValue = (float)field.GetValue(YG2.saves);
                 slider.Slider.value = savedValue;
                 OnVolumeChanged(slider.SaveField, savedValue);

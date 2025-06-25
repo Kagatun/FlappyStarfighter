@@ -6,7 +6,7 @@ namespace Scripts.Spawner
     public class SpawnerEffect : SpawnerObjects<EffectExplosion>
     {
         [SerializeField] private AudioSource _sound;
-        
+
         public void Spawn(Vector2 spawnPoint)
         {
             EffectExplosion effectExplosion = Get();

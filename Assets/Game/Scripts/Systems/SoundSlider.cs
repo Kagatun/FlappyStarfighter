@@ -1,9 +1,13 @@
 using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 [Serializable]
 public class SoundSlider
 {
-    public SoundSaveField SaveField;
-    public Slider Slider;
+    [SerializeField] private SoundSaveField _saveField;
+    [SerializeField] private Slider _slider;
+
+    public SoundSaveField SaveField => _saveField;
+    public Slider Slider => _slider;
 }

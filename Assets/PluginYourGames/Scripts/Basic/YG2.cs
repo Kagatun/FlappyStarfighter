@@ -46,7 +46,7 @@ namespace YG
         private static void Initialize()
         {
 #if UNITY_EDITOR
-            // Reset static for ESC
+            // ResetPosition static for ESC
             _SDKEnabled = false;
             sendMessage = null;
             nowInterAdv = false;

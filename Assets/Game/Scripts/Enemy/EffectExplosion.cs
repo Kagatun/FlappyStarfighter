@@ -13,12 +13,12 @@ namespace Scripts.Enemies
         private bool _isPaused;
 
         public event Action<EffectExplosion> Removed;
-        
-       public Transform TransformEffect {get; private set;}
+
+        public Transform TransformEffect { get; private set; }
 
         private void Awake()
         {
-            TransformEffect =  transform;
+            TransformEffect = transform;
         }
 
         private void OnEnable()
@@ -29,11 +29,11 @@ namespace Scripts.Enemies
 
         private void OnDisable()
         {
-            if (_trackingCoroutine != null)
-            {
-                StopCoroutine(_trackingCoroutine);
-                _trackingCoroutine = null;
-            }
+            if (_trackingCoroutine == null)
+                return;
+
+            StopCoroutine(_trackingCoroutine);
+            _trackingCoroutine = null;
         }
 
         public void Activate() =>

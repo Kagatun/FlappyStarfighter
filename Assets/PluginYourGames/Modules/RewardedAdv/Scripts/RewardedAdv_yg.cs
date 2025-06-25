@@ -15,7 +15,7 @@ namespace YG
         [InitYG]
         private static void RewardedAdvInit()
         {
-            // Reset static for ESC
+            // ResetPosition static for ESC
             onOpenRewardedAdv = null;
             onCloseRewardedAdv = null;
             onRewardAdv = null;

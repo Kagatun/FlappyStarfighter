@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 65737206}
+  _actionButton: {fileID: 65737206}
   _levelNumber: 22
   _backgroundColor: {r: 1, g: 0.39215687, b: 1, a: 1}
   _imageBlock: {fileID: 1183723521}
@@ -2057,7 +2057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 105657618}
+  _actionButton: {fileID: 105657618}
   _levelNumber: 2
   _backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   _imageBlock: {fileID: 1010301501}
@@ -2476,7 +2476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 128854439}
+  _actionButton: {fileID: 128854439}
   _levelNumber: 38
   _backgroundColor: {r: 0.60784316, g: 0, b: 1, a: 1}
   _imageBlock: {fileID: 283926042}
@@ -2893,7 +2893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 144560625}
+  _actionButton: {fileID: 144560625}
   _levelNumber: 40
   _backgroundColor: {r: 0.60784316, g: 0, b: 1, a: 1}
   _imageBlock: {fileID: 1560601197}
@@ -3042,7 +3042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78737cec8acc95449a797a47c30b4007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 998668833}
+  _actionButton: {fileID: 998668833}
   _upgradeSaveField: 1
   _starsLevels:
   - {fileID: 569574941}
@@ -4915,7 +4915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 293251477}
+  _actionButton: {fileID: 293251477}
   _levelNumber: 33
   _backgroundColor: {r: 0.37254903, g: 0.37254903, b: 0.37254903, a: 1}
   _imageBlock: {fileID: 1282811155}
@@ -5447,7 +5447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 329859222}
+  _actionButton: {fileID: 329859222}
   _levelNumber: 34
   _backgroundColor: {r: 0.37254903, g: 0.37254903, b: 0.37254903, a: 1}
   _imageBlock: {fileID: 1340331332}
@@ -5976,7 +5976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 347160673}
+  _actionButton: {fileID: 347160673}
   _levelNumber: 5
   _backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   _imageBlock: {fileID: 1214739580}
@@ -6364,7 +6364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 390523248}
+  _actionButton: {fileID: 390523248}
   _levelNumber: 21
   _backgroundColor: {r: 1, g: 0.39215687, b: 1, a: 1}
   _imageBlock: {fileID: 1985654873}
@@ -6768,7 +6768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 400143913}
+  _actionButton: {fileID: 400143913}
   _levelNumber: 45
   _backgroundColor: {r: 0.4509804, g: 0.78431374, b: 1, a: 1}
   _imageBlock: {fileID: 1083574294}
@@ -6909,7 +6909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 406386435}
+  _actionButton: {fileID: 406386435}
   _levelNumber: 35
   _backgroundColor: {r: 0.37254903, g: 0.37254903, b: 0.37254903, a: 1}
   _imageBlock: {fileID: 510790347}
@@ -7396,7 +7396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 418680225}
+  _actionButton: {fileID: 418680225}
   _levelNumber: 6
   _backgroundColor: {r: 0, g: 1, b: 0.19607843, a: 1}
   _imageBlock: {fileID: 204474877}
@@ -7724,7 +7724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e226ac234fa0fe74aba4fe19e893482a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 426125317}
+  _actionButton: {fileID: 426125317}
   _panelsOpen:
   - {fileID: 2016729173}
   _panelsClose:
@@ -8164,7 +8164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 462402285}
+  _actionButton: {fileID: 462402285}
   _levelNumber: 26
   _backgroundColor: {r: 0, g: 0, b: 1, a: 1}
   _imageBlock: {fileID: 2021645701}
@@ -8434,7 +8434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 482004105}
+  _actionButton: {fileID: 482004105}
   _levelNumber: 25
   _backgroundColor: {r: 1, g: 0.39215687, b: 1, a: 1}
   _imageBlock: {fileID: 852648654}
@@ -8583,7 +8583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78737cec8acc95449a797a47c30b4007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 514180145}
+  _actionButton: {fileID: 514180145}
   _upgradeSaveField: 2
   _starsLevels:
   - {fileID: 1001421517}
@@ -9449,7 +9449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 519037518}
+  _actionButton: {fileID: 519037518}
   _levelNumber: 31
   _backgroundColor: {r: 0.37254903, g: 0.37254903, b: 0.37254903, a: 1}
   _imageBlock: {fileID: 1907589479}
@@ -10383,7 +10383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 594164734}
+  _actionButton: {fileID: 594164734}
   _levelNumber: 8
   _backgroundColor: {r: 0, g: 1, b: 0.19607843, a: 1}
   _imageBlock: {fileID: 1290367151}
@@ -10524,7 +10524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 598018010}
+  _actionButton: {fileID: 598018010}
   _levelNumber: 12
   _backgroundColor: {r: 1, g: 1, b: 0, a: 1}
   _imageBlock: {fileID: 42572926}
@@ -11367,7 +11367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e226ac234fa0fe74aba4fe19e893482a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 665407593}
+  _actionButton: {fileID: 665407593}
   _panelsOpen:
   - {fileID: 2054523519}
   _panelsClose:
@@ -12193,7 +12193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 757940604}
+  _actionButton: {fileID: 757940604}
   _levelNumber: 4
   _backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   _imageBlock: {fileID: 788778621}
@@ -12538,7 +12538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 781791182}
+  _actionButton: {fileID: 781791182}
   _levelNumber: 9
   _backgroundColor: {r: 0, g: 1, b: 0.19607843, a: 1}
   _imageBlock: {fileID: 1074073081}
@@ -12754,7 +12754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 795306583}
+  _actionButton: {fileID: 795306583}
   _levelNumber: 23
   _backgroundColor: {r: 1, g: 0.39215687, b: 1, a: 1}
   _imageBlock: {fileID: 550782759}
@@ -14461,7 +14461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 878097691}
+  _actionButton: {fileID: 878097691}
   _levelNumber: 19
   _backgroundColor: {r: 0, g: 1, b: 1, a: 1}
   _imageBlock: {fileID: 842068332}
@@ -15372,7 +15372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 926470948}
+  _actionButton: {fileID: 926470948}
   _levelNumber: 18
   _backgroundColor: {r: 0, g: 1, b: 1, a: 1}
   _imageBlock: {fileID: 625061036}
@@ -16316,7 +16316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 983577913}
+  _actionButton: {fileID: 983577913}
   _levelNumber: 7
   _backgroundColor: {r: 0, g: 1, b: 0.19607843, a: 1}
   _imageBlock: {fileID: 1156230956}
@@ -17434,7 +17434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1036770072}
+  _actionButton: {fileID: 1036770072}
   _levelNumber: 36
   _backgroundColor: {r: 0.60784316, g: 0, b: 1, a: 1}
   _imageBlock: {fileID: 1197744721}
@@ -18289,7 +18289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1066031486}
+  _actionButton: {fileID: 1066031486}
   _levelNumber: 14
   _backgroundColor: {r: 1, g: 1, b: 0, a: 1}
   _imageBlock: {fileID: 1181367147}
@@ -19518,7 +19518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1150070721}
+  _actionButton: {fileID: 1150070721}
   _levelNumber: 43
   _backgroundColor: {r: 0.4509804, g: 0.78431374, b: 1, a: 1}
   _imageBlock: {fileID: 124334745}
@@ -19988,7 +19988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78737cec8acc95449a797a47c30b4007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 288031925}
+  _actionButton: {fileID: 288031925}
   _upgradeSaveField: 0
   _starsLevels:
   - {fileID: 23516936}
@@ -20688,7 +20688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1202118805}
+  _actionButton: {fileID: 1202118805}
   _levelNumber: 50
   _backgroundColor: {r: 1, g: 0, b: 0, a: 1}
   _imageBlock: {fileID: 2079904210}
@@ -20911,7 +20911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1202146750}
+  _actionButton: {fileID: 1202146750}
   _levelNumber: 1
   _backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   _imageBlock: {fileID: 410526066}
@@ -21547,7 +21547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1268068592}
+  _actionButton: {fileID: 1268068592}
   _levelNumber: 10
   _backgroundColor: {r: 0, g: 1, b: 0.19607843, a: 1}
   _imageBlock: {fileID: 1724836882}
@@ -22059,7 +22059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1276711808}
+  _actionButton: {fileID: 1276711808}
   _levelNumber: 15
   _backgroundColor: {r: 1, g: 1, b: 0, a: 1}
   _imageBlock: {fileID: 36652124}
@@ -22546,7 +22546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1323666533}
+  _actionButton: {fileID: 1323666533}
   _levelNumber: 47
   _backgroundColor: {r: 1, g: 0, b: 0, a: 1}
   _imageBlock: {fileID: 1859025596}
@@ -23828,7 +23828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e226ac234fa0fe74aba4fe19e893482a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1439128032}
+  _actionButton: {fileID: 1439128032}
   _panelsOpen:
   - {fileID: 1717918569}
   _panelsClose:
@@ -24427,7 +24427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1480947568}
+  _actionButton: {fileID: 1480947568}
   _levelNumber: 27
   _backgroundColor: {r: 0, g: 0, b: 1, a: 1}
   _imageBlock: {fileID: 1037497777}
@@ -24615,7 +24615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e226ac234fa0fe74aba4fe19e893482a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1527025669}
+  _actionButton: {fileID: 1527025669}
   _panelsOpen:
   - {fileID: 236991660}
   _panelsClose:
@@ -25289,7 +25289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 562affca953b0a14694c97c8be638c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1860031872}
+  _actionButton: {fileID: 1860031872}
   _inputDetector: {fileID: 0}
   _leftDesktopPanels:
   - {fileID: 296911684}
@@ -25653,7 +25653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1563143305}
+  _actionButton: {fileID: 1563143305}
   _levelNumber: 32
   _backgroundColor: {r: 0.37254903, g: 0.37254903, b: 0.37254903, a: 1}
   _imageBlock: {fileID: 1208930040}
@@ -25794,7 +25794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1574688655}
+  _actionButton: {fileID: 1574688655}
   _levelNumber: 44
   _backgroundColor: {r: 0.4509804, g: 0.78431374, b: 1, a: 1}
   _imageBlock: {fileID: 1975365157}
@@ -26127,7 +26127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1623326297}
+  _actionButton: {fileID: 1623326297}
   _levelNumber: 41
   _backgroundColor: {r: 0.4509804, g: 0.78431374, b: 1, a: 1}
   _imageBlock: {fileID: 66714034}
@@ -27374,7 +27374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1731149946}
+  _actionButton: {fileID: 1731149946}
   _levelNumber: 49
   _backgroundColor: {r: 1, g: 0, b: 0, a: 1}
   _imageBlock: {fileID: 300905354}
@@ -27634,7 +27634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78737cec8acc95449a797a47c30b4007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1907021155}
+  _actionButton: {fileID: 1907021155}
   _upgradeSaveField: 3
   _starsLevels:
   - {fileID: 839149637}
@@ -27744,7 +27744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1760034171}
+  _actionButton: {fileID: 1760034171}
   _levelNumber: 37
   _backgroundColor: {r: 0.60784316, g: 0, b: 1, a: 1}
   _imageBlock: {fileID: 907804312}
@@ -27885,7 +27885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1770983716}
+  _actionButton: {fileID: 1770983716}
   _levelNumber: 20
   _backgroundColor: {r: 0, g: 1, b: 1, a: 1}
   _imageBlock: {fileID: 399179282}
@@ -28176,7 +28176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1790998538}
+  _actionButton: {fileID: 1790998538}
   _levelNumber: 24
   _backgroundColor: {r: 1, g: 0.39215687, b: 1, a: 1}
   _imageBlock: {fileID: 1865887333}
@@ -29622,7 +29622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1873105269}
+  _actionButton: {fileID: 1873105269}
   _levelNumber: 13
   _backgroundColor: {r: 1, g: 1, b: 0, a: 1}
   _imageBlock: {fileID: 999040782}
@@ -30513,8 +30513,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1089732582}
   m_HandleRect: {fileID: 1089732581}
   m_Direction: 2
-  m_Value: 1.0000002
-  m_Size: 0.49429756
+  m_Value: 1
+  m_Size: 0.4942975
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -30813,7 +30813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1937711314}
+  _actionButton: {fileID: 1937711314}
   _levelNumber: 17
   _backgroundColor: {r: 0, g: 1, b: 1, a: 1}
   _imageBlock: {fileID: 910646957}
@@ -30954,7 +30954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1944269773}
+  _actionButton: {fileID: 1944269773}
   _levelNumber: 28
   _backgroundColor: {r: 0, g: 0, b: 1, a: 1}
   _imageBlock: {fileID: 1818578380}
@@ -31095,7 +31095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1945183365}
+  _actionButton: {fileID: 1945183365}
   _levelNumber: 46
   _backgroundColor: {r: 1, g: 0, b: 0, a: 1}
   _imageBlock: {fileID: 89410261}
@@ -31236,7 +31236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1946136653}
+  _actionButton: {fileID: 1946136653}
   _levelNumber: 48
   _backgroundColor: {r: 1, g: 0, b: 0, a: 1}
   _imageBlock: {fileID: 394108530}
@@ -31485,12 +31485,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mixerMaster: {fileID: 24300002, guid: 32d530d31613e994a903fd9c99075c7f, type: 2}
   _soundSliders:
-  - SaveField: 0
-    Slider: {fileID: 1709891452}
-  - SaveField: 1
-    Slider: {fileID: 815172687}
-  - SaveField: 2
-    Slider: {fileID: 1810551569}
+  - _saveField: 0
+    _slider: {fileID: 1709891452}
+  - _saveField: 1
+    _slider: {fileID: 815172687}
+  - _saveField: 2
+    _slider: {fileID: 1810551569}
 --- !u!1 &1954221357
 GameObject:
   m_ObjectHideFlags: 0
@@ -31544,7 +31544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1954221360}
+  _actionButton: {fileID: 1954221360}
   _levelNumber: 11
   _backgroundColor: {r: 1, g: 1, b: 0, a: 1}
   _imageBlock: {fileID: 1414957901}
@@ -31873,7 +31873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 1981346711}
+  _actionButton: {fileID: 1981346711}
   _levelNumber: 39
   _backgroundColor: {r: 0.60784316, g: 0, b: 1, a: 1}
   _imageBlock: {fileID: 1443844016}
@@ -32121,7 +32121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 2007848420}
+  _actionButton: {fileID: 2007848420}
   _levelNumber: 16
   _backgroundColor: {r: 0, g: 1, b: 1, a: 1}
   _imageBlock: {fileID: 290700741}
@@ -32933,7 +32933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 2077055986}
+  _actionButton: {fileID: 2077055986}
   _levelNumber: 30
   _backgroundColor: {r: 0, g: 0, b: 1, a: 1}
   _imageBlock: {fileID: 425310346}
@@ -33074,7 +33074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 2077645492}
+  _actionButton: {fileID: 2077645492}
   _levelNumber: 3
   _backgroundColor: {r: 1, g: 1, b: 1, a: 1}
   _imageBlock: {fileID: 855660340}
@@ -33320,7 +33320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a794d8452622e94f821fe44bcec346a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 2078798850}
+  _actionButton: {fileID: 2078798850}
   _textGold: {fileID: 1027570888}
   _adRewardManager: {fileID: 1549094437}
   _goldView: {fileID: 1549094439}
@@ -33452,7 +33452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 2085901059}
+  _actionButton: {fileID: 2085901059}
   _levelNumber: 42
   _backgroundColor: {r: 0.4509804, g: 0.78431374, b: 1, a: 1}
   _imageBlock: {fileID: 1198024470}
@@ -33950,7 +33950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8d051a40e8cf849a83f57301884f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButton: {fileID: 2112254909}
+  _actionButton: {fileID: 2112254909}
   _levelNumber: 29
   _backgroundColor: {r: 0, g: 0, b: 1, a: 1}
   _imageBlock: {fileID: 2063767438}

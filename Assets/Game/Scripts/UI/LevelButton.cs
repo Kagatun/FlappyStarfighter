@@ -1,7 +1,7 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using TMPro;
 using YG;
 
 namespace Scripts.UI
@@ -17,7 +17,7 @@ namespace Scripts.UI
         private void Start()
         {
             _buttonImage.color = _backgroundColor;
-            
+
             if (YG2.saves.LevelIndex < _levelNumber)
             {
                 _imageBlock.gameObject.SetActive(true);
@@ -26,7 +26,7 @@ namespace Scripts.UI
 
                 return;
             }
-            
+
             _text.text = _levelNumber.ToString();
         }
 
