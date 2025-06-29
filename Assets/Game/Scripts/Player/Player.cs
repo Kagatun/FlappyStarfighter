@@ -9,6 +9,8 @@ namespace Scripts.PlayerUFO
 {
     public class Player : MonoBehaviour, IRemovable
     {
+        private readonly int _timeInvulnerability = 3;
+        
         [SerializeField] private PlayerAttacker _attacker;
         [SerializeField] private PlayerShield _shield;
         [SerializeField] private PlayerLaser _laser;
@@ -22,7 +24,6 @@ namespace Scripts.PlayerUFO
 
         private Transform _transform;
         private Health _health;
-        private int _timeInvulnerability = 3;
         private WaitForSeconds _wait;
         private LayerMask _layerMaskPlayer;
 
@@ -40,12 +41,6 @@ namespace Scripts.PlayerUFO
             _health = new Health(_startMaxHealth + YG2.saves.MaxHitPoints);
             _healthDisplay.SetHealth(_health);
             _health.Deceased += OnDie;
-        }
-
-        private void OnEnable()
-        {
-            if (_health != null)
-                _health.Deceased += OnDie;
         }
 
         private void OnDisable()

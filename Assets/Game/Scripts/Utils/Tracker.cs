@@ -7,7 +7,7 @@ namespace Scripts.Utils
         [SerializeField] private Transform _player;
         [SerializeField] private float _offsetX;
 
-        Transform _transform;
+        private Transform _transform;
 
         private void Awake()
         {

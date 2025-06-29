@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Scripts.UI
@@ -7,8 +6,8 @@ namespace Scripts.UI
     public abstract class ButtonHandler : MonoBehaviour
     {
         [SerializeField] private Button _actionButton;
-        
-        public Button ActionButton => _actionButton;
+
+        protected Button ActionButton => _actionButton;
 
         private void OnEnable()
         {

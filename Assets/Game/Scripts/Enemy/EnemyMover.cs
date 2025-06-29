@@ -2,7 +2,6 @@ using UnityEngine;
 
 namespace Scripts.Enemies
 {
-    [RequireComponent(typeof(Rigidbody2D))]
     public class EnemyMover : MonoBehaviour
     {
         [SerializeField] private float _moveSpeed = 2f;
@@ -11,9 +10,9 @@ namespace Scripts.Enemies
         [SerializeField] private float _zigZagFrequency = 1.5f;
 
         private Transform _transform;
+        private Vector3 _movementDelta;
         private float _initialY;
         private float _time;
-        private Vector3 _movementDelta;
         private float _deltaRotation;
 
         private void Awake()

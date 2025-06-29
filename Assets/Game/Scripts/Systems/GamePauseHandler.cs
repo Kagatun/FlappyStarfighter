@@ -11,14 +11,7 @@ namespace Scripts.Systems
 
         private void Start()
         {
-            if (FocusObserver.HasFocus == false)
-            {
-                OnPauseGame();
-            }
-            else
-            {
-                OnUnPauseGame();
-            }
+            SetPauseState(!FocusObserver.HasFocus);
         }
 
         private void OnEnable()
@@ -37,17 +30,13 @@ namespace Scripts.Systems
 
         private bool ShouldStayPaused()
         {
-            if (_imagesPause.Count == 0 || _imagesPause == null)
-            {
+            if (_imagesPause == null || _imagesPause.Count == 0)
                 return false;
-            }
 
             foreach (var image in _imagesPause)
             {
                 if (image != null && image.gameObject.activeSelf)
-                {
                     return true;
-                }
             }
 
             return false;
@@ -57,82 +46,45 @@ namespace Scripts.Systems
         {
             if (visible)
             {
-                if (ShouldStayPaused() == false)
-                {
-                    OnUnPauseGame();
-                }
+                if (!ShouldStayPaused())
+                    SetPauseState(false);
             }
             else
             {
-                OnPauseGame();
+                SetPauseState(true);
             }
         }
 
         private void OnFocus(bool hasFocus)
         {
-            if (FocusObserver.IsTransitioning)
-            {
-                if (hasFocus == false)
-                {
-                    OnPauseGame();
-                }
-                else
-                {
-                    OnUnPauseGame();
-                }
-
-                return;
-            }
-
-            if (hasFocus == false)
-            {
-                OnPauseGame();
-            }
-            else
-            {
-                if (!ShouldStayPaused())
-                {
-                    OnUnPauseGame();
-                }
-            }
+            SetPauseState(!hasFocus);
         }
 
         private void OnPause(bool pauseStatus)
         {
-            if (FocusObserver.IsTransitioning)
-            {
-                if (pauseStatus)
-                {
-                    OnPauseGame();
-                }
-                else
-                {
-                    OnUnPauseGame();
-                }
+            SetPauseState(pauseStatus);
+        }
 
-                return;
-            }
-
-            if (pauseStatus)
+        private void SetPauseState(bool wantPause)
+        {
+            if (wantPause)
             {
-                OnPauseGame();
+                PauseGame();
             }
             else
             {
                 if (!ShouldStayPaused())
-                {
-                    OnUnPauseGame();
-                }
+                    UnPauseGame();
             }
         }
 
-        private void OnPauseGame()
+        private void PauseGame()
         {
             AudioListener.pause = true;
             Time.timeScale = 0;
         }
 
-        private void OnUnPauseGame()
+        private void UnPauseGame()
         {
             AudioListener.pause = false;
             Time.timeScale = 1;

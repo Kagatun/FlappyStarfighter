@@ -12,7 +12,6 @@ namespace Scripts.Systems
         public static event Action<bool> ApplicationPause;
 
         public static bool HasFocus { get; private set; } = true;
-        public static bool IsTransitioning { get; }
 
         private void Start()
         {

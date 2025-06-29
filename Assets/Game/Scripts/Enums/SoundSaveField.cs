@@ -1,6 +1,9 @@
-public enum SoundSaveField
+namespace Scripts.Systems
 {
-    MasterVolume,
-    MusicVolume,
-    SoundVolume,
+    public enum SoundSaveField
+    {
+        MasterVolume,
+        MusicVolume,
+        SoundVolume,
+    }
 }
